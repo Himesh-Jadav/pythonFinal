@@ -1,0 +1,31 @@
+# Package example structure:
+# timeconvert/
+#   __init__.py
+#   converter.py
+# main.py
+
+# Create a folder named timeconvert and put converter.py in it.
+# converter.py contents:
+#
+# class TimeConverter:
+#     def to_24(self, time):
+#         from datetime import datetime
+#         return datetime.strptime(time, "%I:%M %p").strftime("%H:%M")
+#     def to_12(self, time):
+#         from datetime import datetime
+#         return datetime.strptime(time, "%H:%M").strftime("%I:%M %p")
+#
+# main.py contents:
+#
+# from timeconvert.converter import TimeConverter
+# try:
+#     t = TimeConverter()
+#     value = input("Enter time (e.g. 02:30 PM or 14:30): ")
+#     if "AM" in value.upper() or "PM" in value.upper():
+#         print("24-hour:", t.to_24(value.upper()))
+#     else:
+#         print("12-hour:", t.to_12(value))
+# except ValueError:
+#     print("Invalid time format")
+#
+# Package and module source files are included separately in this ZIP.
